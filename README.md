@@ -23,6 +23,6 @@ Create a function `add(string)` that returns the sum of numbers in a string, fol
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/string-calculator-tdd-js.git
-   cd string-calculator-tdd-js
+   git clone https://github.com/VaibhavKhushalani/TDD-Assessment-Incubyte-.git
+
    ```
