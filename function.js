@@ -1,4 +1,5 @@
 function add(numbers) {
   if (!numbers) return 0;
+  return parseInt(numbers, 10);
 }
-console.assert(add("") === 0, "Empty string returns 0");
+console.assert(add("5") === 5, "Single number returns itself");
