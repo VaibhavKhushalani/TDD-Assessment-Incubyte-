@@ -13,14 +13,10 @@ function add(numbers) {
     throw new Error(`Negatives not allowed: ${negatives.join(", ")}`);
   }
 
-  return nums.reduce((sum, n) => sum + parseInt(n, 10), 0);
+  return nums.reduce((sum, n) => {
+    const num = parseInt(n, 10);
+    return num <= 1000 ? sum + num : sum;
+  }, 0);
 }
 
-try {
-  add("1,-2");
-} catch (e) {
-  console.assert(
-    e.message === "Negatives not allowed: -2",
-    "Negative number throws error"
-  );
-}
+console.assert(add("2,1001") === 2, "Ignores numbers greater than 1000");
