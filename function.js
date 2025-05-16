@@ -1,5 +1,7 @@
 function add(numbers) {
   if (!numbers) return 0;
-  return parseInt(numbers, 10);
+  const nums = numbers.split(",");
+  return nums.reduce((sum, n) => sum + parseInt(n, 10), 0);
 }
-console.assert(add("5") === 5, "Single number returns itself");
+
+console.assert(add("1,2") === 3, "Sum of two numbers");
